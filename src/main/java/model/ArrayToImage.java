@@ -39,7 +39,7 @@ public class ArrayToImage<T> {
         }
       }
     }
-    File output = new File(filename);
+    File output = new File("generated/" + filename);
     try {
       output.createNewFile();
       ImageIO.write(buffImg, "jpg", output);
@@ -49,6 +49,6 @@ public class ArrayToImage<T> {
   }
 
   public void setFileName(String s) {
-    this.fileName = s;
+    this.fileName = "generated/" + s;
   }
 }
