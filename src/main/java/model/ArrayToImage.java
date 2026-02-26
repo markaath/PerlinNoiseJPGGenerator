@@ -39,7 +39,7 @@ public class ArrayToImage<T> {
         }
       }
     }
-    File output = new File("generated/" + filename + ".jpg");
+    File output = filename.substring(filename.length() - 4).equals(".jpg") ? new File("generated/" + filename) : new File("generated/" + filename + ".jpg");
     try {
       output.createNewFile();
       ImageIO.write(buffImg, "jpg", output);
